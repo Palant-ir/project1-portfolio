@@ -10,10 +10,29 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('hello there'),
-        ),
+      debugShowCheckedModeBanner: false,
+      home: MyPortfolioApp(),
+    );
+  }
+}
+
+class MyPortfolioApp extends StatelessWidget {
+  const MyPortfolioApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: const Icon(Icons.person_4),
+        title: const Text('Portfolio'),
+        actions: [
+          IconButton(
+            onPressed: () {
+              //TODO implement navigation to next page
+            },
+            icon: const Icon(Icons.navigate_next_rounded),
+          ),
+        ],
       ),
     );
   }
