@@ -34,6 +34,18 @@ class MyPortfolioApp extends StatelessWidget {
           ),
         ],
       ),
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset(
+              'assets/images/profile_pic.jpg',
+              height: 200,
+              width: 200,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
