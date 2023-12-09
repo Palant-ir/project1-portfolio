@@ -19,6 +19,9 @@ class MainApp extends StatelessWidget {
 class MyPortfolioApp extends StatelessWidget {
   const MyPortfolioApp({super.key});
 
+  final TextStyle textTitleStyle = const TextStyle(fontSize: 30.0);
+  final TextStyle textStyle = const TextStyle(fontSize: 20.0);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,6 +47,24 @@ class MyPortfolioApp extends StatelessWidget {
               height: 200,
               width: 200,
             ),
+            const SizedBox(height: 40),
+            Text(
+              'hello.',
+              style: textTitleStyle,
+            ),
+            const SizedBox(
+              height: 15.0,
+            ),
+            Text(
+              'i am a flutter developer',
+              style: textStyle,
+              textAlign: TextAlign.left,
+            ),
+            Text(
+              'currently developing a fitness application',
+              style: textStyle,
+              textAlign: TextAlign.start,
+            )
           ],
         ),
       ),
