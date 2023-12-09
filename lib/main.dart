@@ -27,6 +27,7 @@ class MyPortfolioApp extends StatelessWidget {
         title: const Text('Portfolio'),
         actions: [
           IconButton(
+            tooltip: 'contact details',
             onPressed: () {
               //TODO implement navigation to next page
             },
