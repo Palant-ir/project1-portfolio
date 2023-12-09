@@ -32,7 +32,10 @@ class MyPortfolioApp extends StatelessWidget {
           IconButton(
             tooltip: 'contact details',
             onPressed: () {
-              //TODO implement navigation to next page
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) {
+                return const ContactPage();
+              }));
             },
             icon: const Icon(Icons.navigate_next_rounded),
           ),
@@ -65,6 +68,41 @@ class MyPortfolioApp extends StatelessWidget {
               style: textStyle,
               textAlign: TextAlign.start,
             )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class ContactPage extends StatelessWidget {
+  const ContactPage({super.key});
+  final TextStyle textStyle = const TextStyle(fontSize: 20.0);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Contact Info'),
+      ),
+      body: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              'Email : han.kaungkhant42@gmail.com',
+              style: textStyle,
+            ),
+            Text(
+              'phone : +65 9180 8539',
+              style: textStyle,
+            ),
+            Text(
+              'github : @sumerAk',
+              style: textStyle,
+            ),
+            const SizedBox(height: 40),
+            const Placeholder(),
           ],
         ),
       ),
