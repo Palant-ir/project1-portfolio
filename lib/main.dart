@@ -45,10 +45,9 @@ class MyPortfolioApp extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Image.asset(
-              'assets/images/profile_pic.jpg',
-              height: 200,
-              width: 200,
+            const CircleAvatar(
+              backgroundImage: AssetImage('assets/images/profile_pic.jpg'),
+              radius: 105,
             ),
             const SizedBox(height: 40),
             Text(
