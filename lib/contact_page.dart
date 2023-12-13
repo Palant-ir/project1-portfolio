@@ -14,38 +14,42 @@ class ContactPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Card(
-              elevation: 6,
-              child: Column(
-                children: [
-                  ListTile(
-                    leading: const Icon(Icons.email),
-                    title: Text(
-                      'han.kaungkhant42@gmail.com',
-                      style: textStyle,
-                    ),
-                  ),
-                  ListTile(
-                    leading: const Icon(Icons.phone),
-                    title: Text(
-                      '+65 9180 8539',
-                      style: textStyle,
-                    ),
-                  ),
-                  ListTile(
-                    leading: const Icon(Icons.apps),
-                    title: Text(
-                      'github : @sumerAk',
-                      style: textStyle,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            _contactCard(),
             const SizedBox(height: 40),
             const Placeholder(),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _contactCard() {
+    return Card(
+      elevation: 6,
+      child: Column(
+        children: [
+          ListTile(
+            leading: const Icon(Icons.email),
+            title: Text(
+              'han.kaungkhant42@gmail.com',
+              style: textStyle,
+            ),
+          ),
+          ListTile(
+            leading: const Icon(Icons.phone),
+            title: Text(
+              '+65 9180 8539',
+              style: textStyle,
+            ),
+          ),
+          ListTile(
+            leading: const Icon(Icons.apps),
+            title: Text(
+              'github : @sumerAk',
+              style: textStyle,
+            ),
+          ),
+        ],
       ),
     );
   }
